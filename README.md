@@ -15,10 +15,9 @@ We will have three Azure AI Agents:
 Each agent is defined in Azure AI Foundry and orchestrated using Semantic Kernel.
 
 
-Create an app in your framework of choice (lang python)
-Use Agentic frameworks available in Semantic Kernel, Langchain etc. and use 3 agents in your use-case
+Task : Create an app using Agentic frameworks available in Semantic Kernel.
 Create Cosmos DB in the backend, identify the collections and schema; properties that will be vectorized
 Create Azure OpenAI endpoint service to be able to pass prompts and create embeddings
-Next code up the application, to create the use case to light, making CRUD operations on the database
-Use Vector Search capabilities (full text search and hybrid search are a bonus)
+Code up the application, to create the use case to light, making CRUD operations on the database
+Use Vector Search capabilities
 Ensure you are passing context, memory in your natural language conversations
