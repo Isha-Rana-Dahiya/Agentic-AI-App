@@ -11,6 +11,7 @@ We will have three Azure AI Agents:
 - SearchAgent – Handles semantic product search using vector embeddings.
 - RecommendationAgent – Suggests similar or trending products.
 - CatalogAgent – Manages CRUD operations on the product catalog in Cosmos DB.
+
 Each agent is defined in Azure AI Foundry and orchestrated using Semantic Kernel.
 
 
