@@ -1,5 +1,6 @@
 # Agentic-AI-App
 Use Case: AI Shopping Assistant for Product Discovery
+
 Scenario: A user chats with an AI assistant to:
 - Discover products based on natural language queries
 - Get personalized recommendations
