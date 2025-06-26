@@ -1,25 +1,10 @@
 # Agentic-AI-App
-Use Case: AI Shopping Assistant for Product Discovery
+Use case of ecommerce website is - 'Seller Onboarding & Product Management Assistant'
+Agents:
+- FormFillerAgent: Helps new sellers input structured product info via conversation.
+- ValidatorAgent: Uses GPT to rephrase and clean descriptions.
+- ProductCRUDManager: Interfaces with Cosmos DB for inserts, updates, deletes.
+Scenario: A small business can upload a product by simply chatting: “I want to sell organic cotton t-shirts for $25 in the eco-friendly category.”
 
-Scenario: A user chats with an AI assistant to:
-- Discover products based on natural language queries
-- Get personalized recommendations
-- Ask follow-up questions with memory/context
-- Perform CRUD operations on product catalog
-
-We will have three Azure AI Agents:
-- SearchAgent – Handles semantic product search using vector embeddings.
-- RecommendationAgent – Suggests similar or trending products.
-- CatalogAgent – Manages CRUD operations on the product catalog in Cosmos DB.
-
-Each agent is defined in Azure AI Foundry and orchestrated using Semantic Kernel.
-
-
-Task : Create an app using Agentic frameworks available in Semantic Kernel.
-Create Cosmos DB in the backend, identify the collections and schema; properties that will be vectorized
-Create Azure OpenAI endpoint service to be able to pass prompts and create embeddings
-Code up the application, to create the use case to light, making CRUD operations on the database
-Use Vector Search capabilities
-Ensure you are passing context, memory in your natural language conversations
-
-Problem Statement : Give step by step solution for problem statement - use case of ecommerce website is 'Seller Onboarding & Product Management Assistant'. Create an app in python, Use Agentic frameworks available in Semantic Kernel,                                            use 3 agents in your use-case. Create Cosmos DB in the backend, identify the collections and schema; properties that will be vectorized Create Azure OpenAI endpoint service to be able to pass prompts and create embeddings. Next code up the application, to create the use case to light, making CRUD operations on the database. Use Vector Search capabilities (full text search and hybrid search are a bonus). Ensure you are passing context, memory in your natural language conversations. Use tech stack Azure Cosmos DB, Azure Open AI, Azure AI Agents.
+Create an app in **python**, Use Agentic frameworks available in **Semantic Kernel**, use 3 agents in your use-case. **Create Cosmos DB** in the backend, identify the collections and schema; properties that will be vectorized. Create **Azure OpenAI endpoint** service to be able to pass prompts and create embeddings.
+Next code up the application, to create the use case to light, making CRUD operations on the database. Use Vector Search capabilities (full text search and hybrid search are a bonus). Ensure you are passing context, memory in your natural language conversations. Use tech stack Azure Cosmos DB, Azure Open AI, Azure AI Agents.
