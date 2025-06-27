@@ -341,7 +341,84 @@ Use the existing main.py and simulate sample seller inputs. You’ll see:
 - Azure Bot Framework, or
 - Flask / FastAPI REST layer
 
-  Would you like me to add these as deployment notes or code in your Copilot Page? I can also help you generate an Azure Bicep or ARM template to fully automate this setup.                                                                                                                                                                                                                                                                   
+ Step-by-Step Deployment on Azure
+ 
+🧭 Step 1: Provision Azure Resources
+1.1 Azure OpenAI Service
+- Go to: Azure OpenAI
+- Create a Resource → Azure OpenAI
+- Region: East US or compatible with embedding + GPT models
+- Deploy Models:
+- gpt-35-turbo or gpt-4o (for agent responses)
+- text-embedding-3-small (for vector search)
+- Capture:
+- Resource name
+- Endpoint URL
+- Deployment names
+- Keys
+1.2 Azure Cosmos DB
+- Go to: Create Resource → Azure Cosmos DB for NoSQL
+- Name: ecommerce-db
+- Create container:
+- Name: products
+- Partition key: /category
+- Enable vector indexing (if available in preview region)
+Optionally use MongoDB API if you're using preview vector search capabilities.
+
+
+🔐 Step 2: Secure Your Secrets
+- Use Azure Key Vault to store:
+- OPENAI_API_KEY
+- COSMOS_DB_KEY
+- Set up access policies and integrate them into your app securely if running on Azure App Service or Functions.
+
+🧪 Step 3: Local Test & Run
+1. Clone your local repo
+2. Create .env using keys and URIs
+3. Install packages:
+    pip install -r requirements.txt
+4. Run locally:
+python main.py
+
+Step 4: Containerize the App (Optional)
+If you'd like to deploy in a container:
+- Create Dockerfile
+- Build and tag your image:
+docker build -t ecommerce-agent-app .
+- Test locally:
+docker run --env-file config/settings.env ecommerce-agent-app
+
+ Step 5: Deploy on Azure
+Option A: Azure App Service (Code-Based)
+- Create Web App (Python 3.10+ runtime)
+- Enable Deployment Center (from GitHub or local ZIP)
+- Configure Application Settings:
+- Add .env keys as environment variables
+- Push code or ZIP deploy
+Option B: Azure Container Apps
+- Push Docker image to Azure Container Registry (ACR)
+- Deploy to Azure Container App
+- Map Secrets from Azure Key Vault or App Settings
+
+Step 6: Validate on Azure
+Test with inputs like:
+“I want to sell a set of eco-friendly tea cups for $15. Handmade, ceramic.”
+
+You should see:
+- Structured JSON from the form-filler agent
+- Cleaned description
+- Vector-embedded metadata
+- Cosmos DB record upserted
+
+✅ Optional: Front-End Chat
+Integrate via:
+- Flask / FastAPI REST backend
+- Azure Bot Service frontend with Web Chat or Teams channel
+
+
+
+
+
 
 
 
