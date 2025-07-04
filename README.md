@@ -116,10 +116,15 @@ Agents read/write memory for grounding interactions (“Add another product in t
 
 ✅ Summary Table
 | Layer | Service / Tech | 
+
 | NLP + Reasoning | Azure OpenAI + GPT via SK | 
+
 | Agent Framework | Semantic Kernel Agents + Memory | 
+
 | Database | Azure Cosmos DB + Vector Search | 
+
 | Embedding Engine | Azure OpenAI Embeddings | 
+
 | Language | Python (with SK SDK) | 
 
 
