@@ -128,7 +128,6 @@ Agents read/write memory for grounding interactions (“Add another product in t
 | Language | Python (with SK SDK) | 
 
 
-
 Would you like a Copilot Page scaffolded with skill templates and Cosmos DB wrappers to jumpstart the codebase? I’d love to help you roll out a working prototype.
 
 ## Help me to build a working prototype for the above project
@@ -152,7 +151,6 @@ ecommerce-agent-app/
 
 📦 Step 1: Install Required Libraries
 pip install semantic-kernel azure-cosmos openai python-dotenv numpy
-
 
 
 ⚙️ Step 2: Configure Your Environment (config/settings.env)
